@@ -68,6 +68,7 @@ body {
   position: absolute;
   max-width: 330px;
   right: 10px;
+  bottom: 100px;
   animation: up 1s;
 }
 
@@ -78,19 +79,23 @@ body {
 
 @keyframes up {
   from {
-    transform: translateY(60vh);
+    transform: translateY(5vh);
+    opacity: 0;
   }
   to {
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
 @keyframes down {
   from {
-    transform: translateY(0);
+    transform: translate3d(0, 0px, 0);
+    opacity: 1;
   }
   to {
-    transform: translateY(100vh);
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
   }
 }
 
@@ -101,6 +106,7 @@ body {
 
 .client .name {
   text-align: end;
+  color: #8257e6;
 }
 
 .client_message {
@@ -115,9 +121,10 @@ body {
 
 .client .message {
   background: #f2ecfa;
-  /* background: #cecad4; */
-  padding: 20px 10px;
-  margin: 10px 0;
+  border: 2px solid #8257e6;
+  color: #8257e6;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
   width: 250px;
   margin-left: 30px;
   border-radius: 4px;
@@ -138,7 +145,8 @@ body {
 
 .admin .message {
   width: 230px;
-  background: #f2ecfa;
+  background: #8257e6;
+  color: #fff;
   border-radius: 4px;
   padding: 10px;
   margin-left: 12px;
@@ -269,6 +277,10 @@ input[type="text"]:focus {
 .admin {
   border: 1px solid #ededed;
   margin-top: 5px;
+}
+
+.admin_name {
+  color: #8257e6;
 }
 
 .email {

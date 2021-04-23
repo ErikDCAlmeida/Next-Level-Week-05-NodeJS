@@ -76,7 +76,7 @@ function sendMessage(id) {
   socket.emit("admin_send_message", params);
 
   const divMessages = document.getElementById(`allMessages${id}`);
-  
+
   const createDiv = document.createElement("div");
   createDiv.className = "admin_message_admin";
   createDiv.innerHTML += `Atendente:<br/><div>${params.text}</div>`;
@@ -91,7 +91,7 @@ function sendMessage(id) {
 
 socket.on("admin_receive_message", (data) => {
   const connection = connectionsUser.find(
-    (connection) => connection.socket_id = data.socket_id
+    (connection) => connection.socket_id === data.socket_id
   );
   const divMessages = document.getElementById(
     `allMessages${connection.user_id}`
