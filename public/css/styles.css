@@ -68,7 +68,6 @@ body {
   position: absolute;
   max-width: 330px;
   right: 10px;
-  bottom: 100px;
   animation: up 1s;
 }
 
@@ -79,7 +78,7 @@ body {
 
 @keyframes up {
   from {
-    transform: translateY(5vh);
+    transform: translateY(60vh);
   }
   to {
     transform: translateY(0);
@@ -88,12 +87,10 @@ body {
 
 @keyframes down {
   from {
-    transform: translate3d(0, 0px, 0);
-    opacity: 1;
+    transform: translateY(0);
   }
   to {
-    transform: translate3d(0, 100px, 0);
-    opacity: 0;
+    transform: translateY(100vh);
   }
 }
 
@@ -249,4 +246,106 @@ input[type="text"]:focus {
 .date {
   text-align: right;
   font-size: 1px;
+}
+
+.btn_atd {
+  cursor: pointer;
+  color: #019b01;
+  background: transparent;
+  border: 2px solid #019b01;
+  font-weight: bold;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.btn_atd:hover {
+  opacity: 0.9;
+  background-color: #019b01;
+  color: #fff;
+}
+
+.admin {
+  border: 1px solid #ededed;
+  margin-top: 5px;
+}
+
+.email {
+  float: left;
+  width: 350px;
+}
+
+.admin_send_message {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin_send_message input {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.admin_send_message button {
+  width: 100px;
+  cursor: pointer;
+}
+
+.admin_list_messages {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.admin_message_admin {
+  width: 300px;
+  background: #fff;
+  right: 0;
+  padding: 10px;
+  margin: 12px 12px 12px auto;
+  display: flex;
+  flex-direction: column;
+  color: #8257e6;
+  border: 2px solid #8257e6;
+
+  border-radius: 10px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+#atendimentos {
+  width: 600px;
+}
+
+.admin_message_client {
+  width: 300px;
+  background: #6f5eab;
+  padding: 10px;
+  margin: 10px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.admin_date {
+  font-size: 10px;
+  color: #000000;
+}
+
+.in_support {
+  background: #8d7aef;
+  color: #fff;
+  font-size: 17px;
+}
+
+.btn_send {
+  background: #1eb363;
+  color: #eee;
+  border: none;
+}
+
+.btn_send:hover {
+  opacity: 0.8;
 }

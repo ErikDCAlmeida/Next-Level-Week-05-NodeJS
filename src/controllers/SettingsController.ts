@@ -30,8 +30,8 @@ class SettingsController {
         const { username } = request.params;
         const { chat } = request.body;
         const settingsService = new SettingsService();
-        const settings = await settingsService.update(username, chat);
-        return response.json(settings);
+        await settingsService.update(username, chat);
+        return response.send();
     }
 
 }
